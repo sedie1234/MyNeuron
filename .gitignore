@@ -9,13 +9,17 @@ temp/
 # Claude Code 내부
 .claude/
 
-# ─── Private (이 공개 브랜치에는 올리지 않음) ─────────────────
-# 개인 지식 베이스 (로컬 git 전용)
-neuron/
+# ─── neuron/ : 최상위 폴더 구조만 공개, 실제 문서는 모두 비공개 ───
+neuron/*
+!neuron/대화/
+!neuron/실험/
+!neuron/이론/
+!neuron/지식/
+!neuron/프로젝트/
+!neuron/images/
+neuron/*/*
+!neuron/*/.gitkeep
 
-# 원본 지시서 (비공개)
-order/
-
-# 루트 레벨 개인 메모
+# ─── 기타 개인 메모 ────────────────────────────────────────
 /polyhedral_pipeline_walkthrough.md
 /todo.md
