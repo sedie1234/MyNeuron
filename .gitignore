@@ -1,0 +1,21 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temp (처리 전 임시 파일)
+temp/
+
+# Claude Code 내부
+.claude/
+
+# ─── Private (이 공개 브랜치에는 올리지 않음) ─────────────────
+# 개인 지식 베이스 (로컬 git 전용)
+neuron/
+
+# 원본 지시서 (비공개)
+order/
+
+# 루트 레벨 개인 메모
+/polyhedral_pipeline_walkthrough.md
+/todo.md
