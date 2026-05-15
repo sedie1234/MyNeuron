@@ -1,13 +1,24 @@
+# MyNeuron — git push policy
+# 정책: agent/, tools/, CLAUDE.md, order/만 공개. 지식 문서·파생물은 비공개.
+
 # OS
 .DS_Store
 Thumbs.db
 desktop.ini
+*.swp
 
-# Temp (처리 전 임시 파일)
+# Temp 작업 파일
 temp/
 
-# Claude Code 내부
+# Claude Code 운영 디렉토리 (agent/agents, agent/skills로의 symlink는 재생성 가능)
 .claude/
+
+# 빌드된 mdbook (neuron 파생물)
+/books/
+
+# 개인 학습 목록 / 작업 파일
+/todo.md
+/polyhedral_pipeline_walkthrough.md
 
 # ─── neuron/ : 최상위 폴더 구조만 공개, 실제 문서는 모두 비공개 ───
 neuron/*
@@ -18,8 +29,8 @@ neuron/*
 !neuron/프로젝트/
 !neuron/images/
 neuron/*/*
-!neuron/*/.gitkeep
 
-# ─── 기타 개인 메모 ────────────────────────────────────────
-/polyhedral_pipeline_walkthrough.md
-/todo.md
+# Python 캐시
+__pycache__/
+*.pyc
+*.pyo
